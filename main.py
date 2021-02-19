@@ -29,7 +29,7 @@ def get_followers(username: str, bearer_token: str) -> dict:
     return response.json()
 
 
-def get_locations(data: dict):
+def get_locations(data: dict) -> list:
     """
     Get users' locations from the dictionary. Return list of lists, every one
     of which contains user's nickname and location.
@@ -65,7 +65,7 @@ def get_coordinates(data: str) -> list:
 def build_map(data: list):
     '''
     Generate an html map, where the locations of the friends of the user are
-    displayed as markers.
+    displayed as markers. Save the map to the "friends.html" file.
     '''
     map = folium.Map(location = (36.870190, -29.421995), zoom_start=3)
     fg_map = folium.FeatureGroup(name = 'Friends\' locations')
@@ -111,7 +111,6 @@ def register():
     '''
     name = request.form.get('name')
     token = request.form.get('token')
-    print(name, token)
     if not name or not token:
         return render_template('failure.html')
     main(request.form.get('name'), request.form.get('token'))
