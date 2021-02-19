@@ -3,7 +3,6 @@ This module is a web-app that creates a map with locations of twitter
 followers of a user marked on the map.
 '''
 
-import json
 import requests
 import folium
 from geopy.geocoders import Nominatim
