@@ -8,7 +8,7 @@ followers of a user marked on the map.
 ``` python
 import main.py
 ```
-The app will run auttomatically. You need to click on a link to the server.
+The app will run automatically. You need to click on a link to the server.
 The web-page with a form will appear. Fill in the fileds with valid twitter
 username and bearer token and press the "Find locations" button or press enter.
 If all the arguments are correct, the map will be displayed. If you did not
